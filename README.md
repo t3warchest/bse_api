@@ -1,8 +1,9 @@
 # BSE_API
 
-**Disclaimer:** BSE website restricted the download of the ZIP file using Python scripts. As a workaround, Selenium has been utilized to scrape the file.
+**Disclaimer:** BSE website restricted the download of the ZIP file using Python scripts. As a workaround, I used Selenium to essentially scrape the file.
 
-The support for fetching the last 50 days' data uses `requests`, which is disallowed. `requests` auto-fills required metadata that occurs between a browser and a client. However, the headers field might not match what BSE requires, and determining the correct configuration for websites with complete freedom to set configurations and send arbitrary status codes is a meticulous process. Under time constraints, the decision was made to fetch the present date's CSV file using Selenium.
+But I have included correct code to depict the how to use `requests` had bse not put the restrictions.
+The support for fetching the last 50 days' data uses `requests`, which is disallowed. `requests` auto-fills required metadata that occurs between a browser and a client. However, the headers field might not match what BSE requires, and determining the correct configuration for websites with complete freedom to set configurations and send arbitrary status codes is a meticulous process. Under time constraints, I decided to fetch the present date's CSV file using Selenium.
 
 ## Installation
 
@@ -12,7 +13,8 @@ Use the following code to install the required packages:
 pip install -r requirements.txt
 ```
 
-#Usage
+## Usage
+
 * ## extract_csv file
   * Since there can be a discrepancy in the uploading schedule of BSE, if the URL provided doesn't have the present date's equity list, please change the file name in the download_and_extract_zip function from '
     ```python 
